@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css" />
+  <link rel="stylesheet" href="./mid_term.css" />
+
+  <script src="plugin/chalkboard/plugin.js"></script>
+  <script src="reveal.js-plugins\chart\plugin.js"></script>
+
+  <script src="reveal.js-plugins/anything/plugin.js"></script>
+  <link rel="stylesheet" href="plugin/chalkboard/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/math/math.min.js"
+    integrity="sha512-pIUSGiNwAKHXxIcFxTZZ6RC536f6dHQn3LPYUmilYzayjdH4C4GUNo9T9a6VbkUh3rHSsM52nG8kWOg+16oLFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/math/katex.min.js"
+    integrity="sha512-aP2YrtSradiFnzmnU72H1bFSExqZGaTzlz+9iH+u2nHMJW7f2QtMEdYqImd5tB0DTdKNtIMVtBclnJnYPumYGw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"
+    integrity="sha512-nLsCkPS/rdxRVOkxiKnld9KhQ24V/5kRChzSZ3MoFODykbWyBlQRsHLrbpN3J4LabYBnXIp1EnRIo3ifvyiQIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Quality control Midterm reports</h1>
+        <h3>311657007</h3>
+      </section>
+
+      <section>
+        <h1 class="intro">Agenda</h1>
+        <ul>
+
+          <li class="fragment highlight-current-blue">Dataset</li>
+          <li class="fragment highlight-current-blue">EDA</li>
+          <li class="fragment highlight-current-blue">Method</li>
+          <li class="fragment highlight-current-blue">Check Sheet</li>
+          <li class="fragment highlight-current-blue">Control Chart</li>
+          <li class="fragment highlight-current-blue">Conclusion</li>
+        </ul>
+      </section>
+
+      <section data-auto-animate>
+        <h3 class="intro">Dataset</h3>
+      </section>
+
+      <section data-auto-animate>
+        <h3 class="intro">Dataset</h3>
+        <img class="" src="no_defect.png" width="416" height="416">
+      </section>
+
+      <section data-auto-animate>
+        <h3 class="intro">Dataset</h3>
+        <img class="" src="no_defect.png" width="416" height="416">
+        <img class="" src="defect.png" width="416" height="416">
+        <blockquote>
+          @misc{ defect-detection-kl1i3_dataset,
+          title = { Defect Detection Dataset },
+          type = { Open Source Dataset },
+          author = { Defect Detection },
+          howpublished = { \url{ https://universe.roboflow.com/defect-detection-iwf5g/defect-detection-kl1i3 } },
+          url = { https://universe.roboflow.com/defect-detection-iwf5g/defect-detection-kl1i3 },
+          journal = { Roboflow Universe },
+          publisher = { Roboflow },
+          year = { 2022 },
+          month = { aug },
+          note = { visited on 2022-10-31 },
+          }
+        </blockquote>
+      </section>
+
+      <section data-auto-animate>
+        <h3>Data Distribution</h3>
+        <div style="height: 480px">
+          <canvas data-chart="bar" data-chart-src="data.csv">
+            <!--
+            {
+            "data" : {
+            "datasets" : [{ 
+              backgroundColor:{
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)'
+              }      
+             } ]
+            },
+            "options": { scales: {y: { ticks: { format: { style: 'percent' } } } } },
+            }
+            -->
+          </canvas>
+        </div>
+      </section>
+
+      <section data-auto-animate>
+        <h3>Data Distribution</h3>
+        <div style="height: 480px">
+          <canvas data-chart="bar" data-chart-src="num_obj.csv">
+            <!--
+            {
+            "data" : {
+            "datasets" : [{ 
+              backgroundColor:{
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+              },
+              borderColor: {
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+              },
+              borderWidth: 1   
+             } ]
+            },
+            "options": { scales: {y: { ticks: { format: { style: 'percent' } } } } },
+            }
+            -->
+          </canvas>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="intro">Heat Map</h3>
+        <img src="heatmap.png">
+      </section>
+
+      <section data-auto-animate>
+        <h3 class="intro">Method</h3>
+      </section>
+
+      <section data-auto-animate>
+        <h3 class="intro">Method</h3>
+        <img class="" src="method.png" style="margin-left: -150px;">
+      </section>
+
+      <section>
+        <h3 class="intro">Model Output</h3>
+        <img src="val_gt.jpg" alt="" width="416" height="416" style="margin-right: 100px; margin-top: 50px;">
+        <img src="val_pred.jpg" alt="" width="416" height="416">
+        <p>Figure. Validation ground truth (left) and Model Prediction (right)</p>
+      </section>
+
+      <section>
+        <h1 class="intro">Check Sheet</h1>
+        <ul class="feagment fade-in-then-out">
+          <li class="fragment highlight-current-blue">Interative graphics with WandB</li>
+          <li class="fragment highlight-current-blue">Image path</li>
+          <li class="fragment highlight-current-blue">Date of manufacture</li>
+          <li class="fragment highlight-current-blue">BBoxes coordinates</li>
+          <li class="fragment highlight-current-blue">cls probs</li>
+          <li class="fragment highlight-current-blue">Defect or not defect</li>
+        </ul>
+      </section>
+
+      <section>
+        <iframe class="stretch"
+          src="https://wandb.ai/ddcvlab/Quality-Control/reports/Quality-Control-Midterm-reports--VmlldzoyODgyMzky"
+          frameborder="0"></iframe>
+      </section>
+
+      <section>
+        <h3 class="intro">X bar control chart</h3>
+        <div style="height: 480px">
+
+          <canvas data-chart="line">
+            <!-- {
+             "data": {
+              "labels": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],
+              "datasets":[
+               {
+                "data": [3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05,3.05],
+                "label":"UCL","backgroundColor":"rgba(20,120,220,.8)"
+               },
+               {
+                "data":[0.742481, 1.8973229999999996, 2.079772, 1.4683549999999999, 3.0080985, 1.909126, 1.8873455, 3.6015015000000004, 2.231624, 2.7707729999999997, 2.183957, 2.067565, 1.3565735, 2.074441, 2.2576297500000004, 1.8661980000000002, 0.0, 2.15052375, 2.2337930000000004, 0.795446, 1.612849, 1.223632, 1.538277, 2.625138, 2.6958640000000003],
+                "label":"X bar","backgroundColor":"rgba(220,120,120,.8)"
+               },
+               {
+                "data": [1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93,1.93],
+                "label":"mean", "backgroundColor":"rgba(20,120,220,.8)"
+               },
+               {
+                "data":[0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82,  0.82],
+                "label":"LCL","backgroundColor":"rgba(20,120,220,.8)"
+               }
+              ]
+             }
+            } -->
+          </canvas>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="intro">Remove outlier</h3>
+        <div style="height: 480px">
+
+          <canvas data-chart="line">
+            <!-- {
+             "data": {
+              "labels": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],
+              "datasets":[
+               {
+                "data": [3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24,3.24],
+                "label":"UCL","backgroundColor":"rgba(20,120,220,.8)"
+               },
+               {
+                "data":[1.897323  , 2.079772  , 1.468355  , 3.0080985 , 1.909126  , 1.8873455 , 2.231624  , 2.770773  , 2.183957  , 2.067565  , 1.3565735 , 2.074441  , 2.25762975, 1.866198  , 2.15052375, 2.233793  , 1.612849  , 1.223632  , 1.538277  , 2.625138  , 2.695864  ],
+                "label":"X bar","backgroundColor":"rgba(220,120,120,.8)"
+               },
+               {
+                "data": [2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05,2.05],
+                "label":"mean", "backgroundColor":"rgba(20,120,220,.8)"
+               },
+               {
+                "data":[0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87,0.87],
+                "label":"LCL","backgroundColor":"rgba(20,120,220,.8)"
+               }
+              ]
+             }
+            } -->
+          </canvas>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="mid_term.js"></script>
+</body>
+
+</html>

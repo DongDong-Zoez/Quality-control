@@ -1,0 +1,4 @@
+split, sample
+train, 360
+val, 20
+test, 20

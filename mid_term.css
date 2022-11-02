@@ -4,6 +4,17 @@
     --paragraph-font-size: 50px;
 }
 
+* {
+    color: black;
+    text-shadow:
+        1px 1px 3px rgb(255, 255, 255),
+        -1px -1px 3px rgba(0, 0, 0, 0.8);
+}
+
+::selection {
+    background-color: white;
+}
+
 h1 {
     font-size: var(--header-font-size);
     font-family: var(--font-family);

@@ -31,12 +31,12 @@
 
   <div class="reveal">
     <div class="slides">
-      <section>
+      <section data-background-color="#dde1e7">
         <h1>Quality control Midterm reports</h1>
         <h3>311657007</h3>
       </section>
 
-      <section>
+      <section data-background-color="#dde1e7">
         <h1 class="intro">Agenda</h1>
         <ul>
 
@@ -49,16 +49,16 @@
         </ul>
       </section>
 
-      <section data-auto-animate>
+      <section data-background-color="#dde1e7" data-auto-animate>
         <h3 class="intro">Dataset</h3>
       </section>
 
-      <section data-auto-animate>
+      <section data-background-color="#dde1e7" data-auto-animate>
         <h3 class="intro">Dataset</h3>
         <img class="" src="no_defect.png" width="416" height="416">
       </section>
 
-      <section data-auto-animate>
+      <section data-background-color="#dde1e7" data-auto-animate>
         <h3 class="intro">Dataset</h3>
         <img class="" src="no_defect.png" width="416" height="416">
         <img class="" src="defect.png" width="416" height="416">
@@ -78,7 +78,7 @@
         </blockquote>
       </section>
 
-      <section data-auto-animate>
+      <section data-background-color="#dde1e7" data-auto-animate>
         <h3>Data Distribution</h3>
         <div style="height: 480px">
           <canvas data-chart="bar" data-chart-src="data.csv">
@@ -100,7 +100,29 @@
         </div>
       </section>
 
-      <section data-auto-animate>
+      <section data-background-color="#dde1e7" data-auto-animate>
+        <h3>Data Distribution</h3>
+        <div style="height: 480px">
+          <canvas data-chart="bar" data-chart-src="dist.csv">
+            <!--
+            {
+            "data" : {
+            "labels": ['defect', 'no-defect']
+            "datasets" : [{ 
+              "backgroundColor":{
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+              },
+             } ]
+            },
+            "options": { scales: {y: { ticks: { format: { style: 'percent' } } } } },
+            }
+            -->
+          </canvas>
+        </div>
+      </section>
+
+      <section data-background-color="#dde1e7" data-auto-animate>
         <h3>Data Distribution</h3>
         <div style="height: 480px">
           <canvas data-chart="bar" data-chart-src="num_obj.csv">
@@ -132,28 +154,28 @@
         </div>
       </section>
 
-      <section>
+      <section data-background-color="#dde1e7">
         <h3 class="intro">Heat Map</h3>
         <img src="heatmap.png">
       </section>
 
-      <section data-auto-animate>
+      <section data-background-color="#dde1e7" data-auto-animate>
         <h3 class="intro">Method</h3>
       </section>
 
-      <section data-auto-animate>
+      <section data-background-color="#dde1e7" data-auto-animate>
         <h3 class="intro">Method</h3>
         <img class="" src="method.png" style="margin-left: -150px;">
       </section>
 
-      <section>
+      <section data-background-color="#dde1e7">
         <h3 class="intro">Model Output</h3>
         <img src="val_gt.jpg" alt="" width="416" height="416" style="margin-right: 100px; margin-top: 50px;">
         <img src="val_pred.jpg" alt="" width="416" height="416">
         <p>Figure. Validation ground truth (left) and Model Prediction (right)</p>
       </section>
 
-      <section>
+      <section data-background-color="#dde1e7">
         <h1 class="intro">Check Sheet</h1>
         <ul class="feagment fade-in-then-out">
           <li class="fragment highlight-current-blue">Interative graphics with WandB</li>
@@ -165,13 +187,10 @@
         </ul>
       </section>
 
-      <section data-background-iframe="https://wandb.ai/ddcvlab/Quality-Control/reports/Quality-Control-Midterm-reports--VmlldzoyODgyMzky" data-background-interactive>
-<!--         <iframe class="stretch"
-          src="https://wandb.ai/ddcvlab/Quality-Control/reports/Quality-Control-Midterm-reports--VmlldzoyODgyMzky"
-          frameborder="0"></iframe> -->
+      <section data-background-color="#dde1e7" data-background-iframe="https://wandb.ai/ddcvlab/Quality-Control/reports/Quality-Control-Midterm-reports--VmlldzoyODgyMzky" data-background-interactive>
       </section>
 
-      <section>
+      <section data-background-color="#dde1e7">
         <h3 class="intro">X bar control chart</h3>
         <div style="height: 480px">
 
@@ -203,7 +222,7 @@
         </div>
       </section>
 
-      <section>
+      <section data-background-color="#dde1e7">
         <h3 class="intro">Remove outlier</h3>
         <div style="height: 480px">
 
@@ -233,6 +252,15 @@
             } -->
           </canvas>
         </div>
+      </section>
+
+      <section data-background-color="#dde1e7">
+        <h1 class="intro">Conclusion</h1>
+        <ul class="feagment fade-in-then-out">
+          <li class="fragment highlight-current-blue">Same architecture can be applied to another product</li>
+          <li class="fragment highlight-current-blue">We can monitor our data in real time</li>
+          <li class="fragment highlight-current-blue">The whole process can be done totally by AI</li>
+        </ul>
       </section>
     </div>
   </div>

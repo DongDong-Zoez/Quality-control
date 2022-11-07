@@ -99,7 +99,7 @@ Reveal.initialize({
     },
     chart: {
         defaults: {
-            color: 'lightgray', // color of labels
+            color: 'black', // color of labels
             scale: {
                 beginAtZero: true,
                 ticks: { stepSize: 1 },

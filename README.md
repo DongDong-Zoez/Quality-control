@@ -19,3 +19,7 @@ publisher = { Roboflow },
 year = { 2022 },
 month = { aug },
 note = { visited on 2022-10-31 },
+
+### Appendix
+
+The ppt is available [here](https://dongdong-zoez.github.io/Quality-control/mid_term.html)
